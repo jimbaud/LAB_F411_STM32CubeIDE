@@ -63,7 +63,7 @@ F411_UART_write.zip : Détaille un exemple décrivant l'écriture et l'envoi de 
 
 Chacun de ces répertoires contient des exemples de code, des projets STM32 CubeIDE, des configurations matérielles et logicielles spécifiques à chaque projet. Ces ressources sont conçues pour aider les étudiants à apprendre et à explorer les diverses fonctionnalités du microcontrôleur STM32F411 dans le cadre de leur formation.
 
-# English below : 
+# English: 
 
 Description:
 This GitHub directory contains a series of code examples in STM32CubeIDE and HAL for practical projects in the STM32F411 microcontroller course. Each compressed file corresponds to a specific project that exploits particular functionalities of the microcontroller and aims to demonstrate its use in various scenarios.
