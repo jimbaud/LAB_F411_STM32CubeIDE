@@ -60,3 +60,66 @@ F411_UART_read.zip : Propose un exemple illustrant la lecture de données via la
 F411_UART_write.zip : Détaille un exemple décrivant l'écriture et l'envoi de données via la communication UART.
 
 Chacun de ces fichiers .zip contient des exemples de code, des projets STM32 CubeIDE, des configurations matérielles et logicielles spécifiques à chaque projet. Ces ressources sont conçues pour aider les étudiants à apprendre et à explorer les diverses fonctionnalités du microcontrôleur STM32F411 dans le cadre de leur formation.
+
+Description:
+This GitHub directory contains a series of compressed files (.zip files) that bring together code examples intended for practical projects in the course on the STM32F411 microcontroller. Each compressed file corresponds to a specific project that exploits particular features of the microcontroller and aims to demonstrate its use in various scenarios.
+
+List of files :
+
+F411_ADC.zip: Provides sample code illustrating the use of the STM32F411 microcontroller's analogue-to-digital converter (ADC). This project shows how to carry out analogue measurements converted into digital data.
+
+F411_BLE.zip: Contains an example that exploits the Bluetooth Low Energy (BLE) functionality of the STM32F411. It demonstrates the implementation of low energy wireless communication.
+
+F411_I2C_LCD.zip: Presents a practical project for controlling an LCD display via the I2C protocol. It shows how to use the microcontroller to drive a display in this way.
+
+F411_LED.zip : A simple example of controlling an LED using the STM32F411 microcontroller. It aims to illustrate the basics of controlling GPIO outputs to turn an LED on and off.
+
+F411_LED_debug.zip : Provides a simple project to understand the use of debugging in the context of turning on an LED. It provides a practical example for engineering students of how to use debugging to check LED behaviour.
+
+F411_LM35.zip : Contains an example implementing an LM35 temperature sensor with the microcontroller. The aim of this project is to measure and interpret temperature data from this sensor.
+
+F411_PID.zip: Contains an example implementing a PID (Proportional, Integral, Derivative) controller. The purpose of this file is to illustrate the regulation of dynamic systems using a PID controller.
+
+F411_PID_APPLI_2.zip : Continuation of the PID application, more advanced part for the implementation of the PID controller.
+
+F411_PID_APPLI_3.zip : Continuation of the PID application, third part of the project for the PID controller.
+
+F411_PWM.zip : Contains sample code demonstrating pulse width modulation (PWM). The project illustrates how to generate PWM signals using the STM32F411 microcontroller.
+
+F411_PWM2.zip: Continuation of the previous example for pulse width modulation. Offers advanced functionalities or additional applications concerning PWM.
+
+F411_Push_Button.zip : A practical project for manipulating a push button using the STM32F411 microcontroller. The example shows how to react to the state of the button to control an LED, for example.
+
+F411_Push_Button_IT.zip: Variation on the previous project, but this time the button is detected using hardware interrupts (External Interrupt).
+
+F411_Push_Button_IT.zip : Variation on the previous project, but this time the button press detection is carried out via hardware interrupts (External Interrupt).
+
+F411_RTC.zip: Contains an example illustrating the configuration and use of the STM32F411 microcontroller's real-time clock (RTC). It shows how to configure and use the RTC functions.
+
+F411_Rotary_Encoder.zip: Presents a project implementing a rotary encoder with the STM32F411 microcontroller. It details how to interpret the rotary encoder signals for different applications.
+
+F411_SPI_7735_Screen.zip : Contains an example showing the use of a 7735 screen via the SPI communication protocol. The project highlights the configuration and control of the 7735 screen using the microcontroller.
+
+F411_SampleApp_BLE.zip: Provides an example of an application using the Bluetooth Low Energy (BLE) connectivity of the STM32F411 microcontroller. It provides a simple and detailed BLE application example for software engineering.
+
+F411_Sensor_Demo_BLE.zip : Continuation of the previous example, providing a demonstration of an application linked to a sensor via BLE communication.
+
+F411_TC74.zip: Contains an example implementing the TC74 temperature sensor with the microcontroller. It shows how to collect and process temperature data via this specific sensor.
+
+F411_Timer.zip: Demonstrates the use of the microcontroller's timer functions. It explains how to configure and use the internal timers for different applications.
+
+F411_UART.zip : Contains an example of how to establish a UART (Universal Asynchronous Receiver Transmitter) communication with the STM32F411 microcontroller. This example covers the sending and receiving of data via the UART.
+
+F411_UART_BLE.zip: Extension of the previous example, but this time integrating UART communication with Bluetooth Low Energy.
+
+F411_UART_HMI.zip: Provides an example of interaction with a human-machine interface (HMI) via UART communication.
+
+F411_UART_IT.zip : Contains an example showing interrupt management for the microcontroller's UART communication.
+
+F411_UART_Update_BLE.zip: Example implementing firmware update via UART and Bluetooth Low Energy communication.
+
+F411_UART_read.zip: Provides an example of reading data via UART communication.
+
+F411_UART_write.zip: Details an example describing the writing and sending of data via UART communication.
+
+Each of these .zip files contains code examples, STM32 CubeIDE projects, and hardware and software configurations specific to each project. These resources are designed to help students learn and explore the various functionalities of the STM32F411 microcontroller as part of their training.
