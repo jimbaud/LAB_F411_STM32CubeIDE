@@ -5,7 +5,7 @@
 Description :
 Ce répertoire GitHub contient une série d'exemples de code sous STM32CubeIDE et HAL destinée aux projets pratiques du cours sur le microcontrôleur STM32F411. Chaque fichier compressé correspond à un projet spécifique qui exploite des fonctionnalités particulières du microcontrôleur et vise à démontrer son utilisation dans divers scénarios.
 
-## Comment importer les projets dans STM32CubeIDE :
+#### Comment importer les projets dans STM32CubeIDE :
 
 Dans GitHub, les projets ne contiennent pas les fichiers de définition du projet, il faut alors les recréer. La première étape est de télécharger les fichiers sur GitHub, pour cela allez sur le bouton code puis dans la liste déroulante, choisissez Download ZIP.
 
