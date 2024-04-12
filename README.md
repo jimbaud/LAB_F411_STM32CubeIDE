@@ -4,21 +4,27 @@
 
 Description :
 Ce répertoire GitHub contient une série d'exemples de code sous STM32CubeIDE et HAL destinée aux projets pratiques du cours sur le microcontrôleur STM32F411. Chaque fichier compressé correspond à un projet spécifique qui exploite des fonctionnalités particulières du microcontrôleur et vise à démontrer son utilisation dans divers scénarios.
-Comment importer les projets dans STM32CubeIDE :
+
+#Comment importer les projets dans STM32CubeIDE :
 
 Dans GitHub, les projets ne contiennent pas les fichiers de définition du projet, il faut alors les recréer. La première étape est de télécharger les fichiers sur GitHub, pour cela allez sur le bouton code puis dans la liste déroulante, choisissez Download ZIP.
+
 ![Vue Github](./Images/GitHub.jpg) 
 
-Copiez ensuite le/les répertoire(s) dans votre répertoire de Workspace, Figure 62.
+Copiez ensuite le/les répertoire(s) dans votre répertoire de Workspace.
+
 ![Vue Step1](./Images/Step1.jpg)   
 
 Cliquez dans le menu File sur Import, puis dans la fenêtre, déroulez le répertoire General et sélectionnez Import an Existing STM32CubeMX Configuration File (.ioc), une nouvelle fenêtre s’ouvre, cliquez sur le bouton Browse puis sélectionner dans l’exploreur le fichier .ioc du projet (ici F411_LED.ioc).
+
 ![Vue Step2](./Images/Step2.jpg)        
  
 Une fois cette étape réalisée, le fichier sélectionné apparaît dans la fenêtre, ensuite, il faut cliquer sur le bouton Finish. À noter que si le projet a été réalisé avec une version ultérieure de drivers ou de CubeMX, il vous sera proposé de migrer vers la dernière version. Cliquez sur Migrate pour accepter.
+
 ![Vue Step3](./Images/Step3.jpg)       
 
-Le projet est maintenant correctement importé, il est maintenant possible de générer le code (alt+k) et de compiler le projet (ctrl+b). 
+Le projet est maintenant correctement importé, il est maintenant possible de générer le code (alt+k) et de compiler le projet (ctrl+b).
+
 ![Vue Step4](./Images/Step4.jpg)   
 
 Liste des fichiers :
