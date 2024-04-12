@@ -6,7 +6,9 @@
 #### Description :
 Ce dépôt GitHub contient une série d'exemples de code sous STM32CubeIDE et HAL destinée aux projets pratiques du cours sur le microcontrôleur STM32F411. Chaque fichier compressé correspond à un projet spécifique qui exploite des fonctionnalités particulières du microcontrôleur et vise à démontrer son utilisation dans divers scénarios.
 
-#### Comment importer les projets dans STM32CubeIDE :
+<details>
+
+<summary>Comment importer les projets dans STM32CubeIDE</summary>
 
 Dans GitHub, les projets ne contiennent pas les fichiers de définition du projet. La première étape est de télécharger les fichiers sur GitHub. Pour cela, allez sur le bouton "Code" puis dans la liste déroulante, choisissez "Download ZIP".
 
@@ -26,9 +28,12 @@ Une fois cette étape réalisée, le fichier sélectionné apparaît dans la fen
 
 Le projet est maintenant correctement importé. Vous pouvez générer le code (Alt + K) et compiler le projet (Ctrl + B).
 
-![Vue Step4](./Images/Step4.jpg)   
+![Vue Step4](./Images/Step4.jpg) 
 
-#### Liste des fichiers :
+</details>
+
+<details>
+<summary>Liste des fichiers :</summary>
 
 * F411_ADC.zip : Fournit un exemple de code illustrant l'utilisation du convertisseur analogique-numérique (CAN) du microcontrôleur STM32F411. Ce projet montre comment réaliser des mesures analogiques converties en données numériques.
 
@@ -86,12 +91,16 @@ Le projet est maintenant correctement importé. Vous pouvez générer le code (A
 
 Chacun de ces répertoires contient des exemples de code, des projets STM32 CubeIDE, des configurations matérielles et logicielles spécifiques à chaque projet. Ces ressources sont conçues pour aider les étudiants à apprendre et à explorer les diverses fonctionnalités du microcontrôleur STM32F411 dans le cadre de leur formation.
 
+</details>
+
 # English: 
 
 #### Description:
 This GitHub repository contains a series of code examples in STM32CubeIDE and HAL for practical projects in the STM32F411 microcontroller course. Each compressed file corresponds to a specific project that exploits particular functionalities of the microcontroller and aims to demonstrate its use in various scenarios.
 
-#### How to import projects into STM32CubeIDE:
+<details>
+ 
+<summary>How to import projects into STM32CubeIDE:</summary>
 
 In GitHub, projects do not contain project definition files. The first step is to download the files from GitHub. To do this, go to the "Code" button and choose "Download ZIP" from the dropdown list.
 
@@ -113,7 +122,11 @@ The project is now properly imported. You can generate the code (Alt + K) and co
 
 ![Step 4 View](./Images/Step4.jpg)   
 
-#### List of files:
+</details>
+
+<details>
+ 
+<summary>List of files:</summary>
 
 * F411_ADC.zip: Provides sample code illustrating the use of the STM32F411 microcontroller's analogue-to-digital converter (ADC). This project shows how to carry out analogue measurements converted into digital data.
 
@@ -174,3 +187,5 @@ The project is now properly imported. You can generate the code (Alt + K) and co
 * F411_UART_write.zip: Details an example describing the writing and sending of data via UART communication.
 
 Each of these directories contains code examples, STM32 CubeIDE projects, hardware and software configurations specific to each project. These resources are designed to help students learn and explore the various functionalities of the STM32F411 microcontroller as part of their training.
+
+</details>
