@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -25,26 +25,26 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32l4xx_nucleo_bus.h"
+#include "stm32f4xx_nucleo_bus.h"
 
 /* Exported Defines ----------------------------------------------------------*/
 
-#define HCI_TL_SPI_EXTI_PORT  GPIOB
-#define HCI_TL_SPI_EXTI_PIN   GPIO_PIN_12
-#define HCI_TL_SPI_EXTI_IRQn  EXTI15_10_IRQn
+#define HCI_TL_SPI_EXTI_PORT  GPIOA
+#define HCI_TL_SPI_EXTI_PIN   GPIO_PIN_0
+#define HCI_TL_SPI_EXTI_IRQn  EXTI0_IRQn
 
-#define HCI_TL_SPI_IRQ_PORT   GPIOB
-#define HCI_TL_SPI_IRQ_PIN    GPIO_PIN_12
+#define HCI_TL_SPI_IRQ_PORT   GPIOA
+#define HCI_TL_SPI_IRQ_PIN    GPIO_PIN_0
 
-#define HCI_TL_SPI_CS_PORT    GPIOB
-#define HCI_TL_SPI_CS_PIN     GPIO_PIN_2
+#define HCI_TL_SPI_CS_PORT    GPIOA
+#define HCI_TL_SPI_CS_PIN     GPIO_PIN_1
 
-#define HCI_TL_RST_PORT       GPIOC
-#define HCI_TL_RST_PIN        GPIO_PIN_2
+#define HCI_TL_RST_PORT       GPIOA
+#define HCI_TL_RST_PIN        GPIO_PIN_8
 
 /* Exported variables --------------------------------------------------------*/
-extern EXTI_HandleTypeDef     hexti12;
-#define H_EXTI_12 hexti12
+extern EXTI_HandleTypeDef     hexti0;
+#define H_EXTI_0 hexti0
 
 /* Exported Functions --------------------------------------------------------*/
 int32_t HCI_TL_SPI_Init    (void* pConf);

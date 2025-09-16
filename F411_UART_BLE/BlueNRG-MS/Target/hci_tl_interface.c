@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -29,7 +29,7 @@
 #define TIMEOUT_DURATION  15U
 
 /* Private variables ---------------------------------------------------------*/
-EXTI_HandleTypeDef hexti12;
+EXTI_HandleTypeDef hexti0;
 
 /******************** IO Operation and BUS services ***************************/
 
@@ -66,7 +66,7 @@ int32_t HCI_TL_SPI_Init(void* pConf)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(HCI_TL_SPI_CS_PORT, &GPIO_InitStruct);
 
-  return BSP_SPI2_Init();
+  return BSP_SPI1_Init();
 }
 
 /**
@@ -123,7 +123,7 @@ int32_t HCI_TL_SPI_Receive(uint8_t* buffer, uint16_t size)
   HAL_GPIO_WritePin(HCI_TL_SPI_CS_PORT, HCI_TL_SPI_CS_PIN, GPIO_PIN_RESET);
 
   /* Read the header */
-  BSP_SPI2_SendRecv(header_master, header_slave, HEADER_SIZE);
+  BSP_SPI1_SendRecv(header_master, header_slave, HEADER_SIZE);
 
   if(header_slave[0] == 0x02)
   {
@@ -139,23 +139,13 @@ int32_t HCI_TL_SPI_Receive(uint8_t* buffer, uint16_t size)
 
       for(len = 0; len < byte_count; len++)
       {
-        BSP_SPI2_SendRecv(&char_ff, (uint8_t*)&read_char, 1);
+        BSP_SPI1_SendRecv(&char_ff, (uint8_t*)&read_char, 1);
         buffer[len] = read_char;
       }
     }
   }
   /* Release CS line */
   HAL_GPIO_WritePin(HCI_TL_SPI_CS_PORT, HCI_TL_SPI_CS_PIN, GPIO_PIN_SET);
-
-#if PRINT_CSV_FORMAT
-  if (len > 0) {
-    print_csv_time();
-    for (int i=0; i<len; i++) {
-      PRINT_CSV(" %02x", buffer[i]);
-    }
-    PRINT_CSV("\n");
-  }
-#endif
 
   return len;
 }
@@ -185,14 +175,14 @@ int32_t HCI_TL_SPI_Send(uint8_t* buffer, uint16_t size)
     HAL_GPIO_WritePin(HCI_TL_SPI_CS_PORT, HCI_TL_SPI_CS_PIN, GPIO_PIN_RESET);
 
     /* Read header */
-    BSP_SPI2_SendRecv(header_master, header_slave, HEADER_SIZE);
+    BSP_SPI1_SendRecv(header_master, header_slave, HEADER_SIZE);
 
     if(header_slave[0] == 0x02)
     {
       /* SPI is ready */
       if(header_slave[1] >= size)
       {
-        BSP_SPI2_SendRecv(buffer, read_char_buf, size);
+        BSP_SPI1_SendRecv(buffer, read_char_buf, size);
       }
       else
       {
@@ -257,10 +247,10 @@ void hci_tl_lowlevel_init(void)
   /* USER CODE END hci_tl_lowlevel_init 2 */
 
   /* Register event irq handler */
-  HAL_EXTI_GetHandle(&hexti12, EXTI_LINE_12);
-  HAL_EXTI_RegisterCallback(&hexti12, HAL_EXTI_COMMON_CB_ID, hci_tl_lowlevel_isr);
-  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+  HAL_EXTI_GetHandle(&hexti0, EXTI_LINE_0);
+  HAL_EXTI_RegisterCallback(&hexti0, HAL_EXTI_COMMON_CB_ID, hci_tl_lowlevel_isr);
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 
   /* USER CODE BEGIN hci_tl_lowlevel_init 3 */
 
