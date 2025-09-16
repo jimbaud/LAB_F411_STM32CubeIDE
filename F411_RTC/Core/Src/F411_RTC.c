@@ -8,7 +8,7 @@
 #include "F411_RTC.h"
 
 char timeRTC[12];
-char date[12];
+char date[13];
 int rtcHours, rtcMinutes, rtcSeconds, rtcYear, rtcMonth, rtcDay;
 uint8_t alarmTriggered;
 
