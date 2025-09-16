@@ -18,15 +18,15 @@ Copiez ensuite le ou les répertoires dans votre répertoire de Workspace.
 
 ![Vue Step1](./Images/Step1.jpg)   
 
-Cliquez dans le menu "File" sur "Import", puis dans la fenêtre, déroulez le répertoire "General" et sélectionnez "Import an Existing STM32CubeMX Configuration File (.ioc)". Une nouvelle fenêtre s’ouvre, cliquez sur le bouton "Browse" puis sélectionnez dans l’explorateur le fichier .ioc du projet (ici F411_LED.ioc).
+Cliquez dans le menu "File" sur "Import", puis dans la fenêtre, déroulez le répertoire "General" et sélectionnez "Import an Existing Projects into Workspace". Une nouvelle fenêtre s’ouvre, cliquez sur le bouton "Browse" puis sélectionnez dans l’explorateur le répertoire de Workspace.
 
 ![Vue Step2](./Images/Step2.jpg)        
  
-Une fois cette étape réalisée, le fichier sélectionné apparaît dans la fenêtre. Ensuite, il faut cliquer sur le bouton "Finish". Si le projet a été réalisé avec une version ultérieure de drivers ou de CubeMX, il vous sera proposé de migrer vers la dernière version. Cliquez sur "Migrate" pour accepter.
+Une fois cette étape réalisée, les projets reconnus apparaîssent dans la fenêtre. Ensuite, il faut cliquer sur le bouton "Finish". Si le projet a été réalisé avec une version ultérieure de drivers ou de CubeMX, il vous sera proposé de migrer vers la dernière version. Cliquez sur "Migrate" pour accepter.
 
 ![Vue Step3](./Images/Step3.jpg)       
 
-Le projet est maintenant correctement importé. Vous pouvez générer le code (Alt + K) et compiler le projet (Ctrl + B).
+Les projets sont maintenant correctement importés. Vous pouvez générer le code (Alt + K) et compiler un des projets (Ctrl + B).
 
 ![Vue Step4](./Images/Step4.jpg) 
 
@@ -112,15 +112,15 @@ Then copy the directory/directories into your Workspace directory.
 
 ![Step 1 View](./Images/Step1.jpg)   
 
-Click on the "File" menu, then "Import". In the window, expand the "General" directory and select "Import an Existing STM32CubeMX Configuration File (.ioc)". A new window will open, click the "Browse" button and select the .ioc file of the project from the explorer (here F411_LED.ioc).
+Click on the "File" menu, then "Import". In the window, expand the "General" directory and select "Import an Existing Projects into Workspace". A new window will open, click the "Browse" button and select the Workspace directory from the explorer.
 
 ![Step 2 View](./Images/Step2.jpg)        
  
-Once this step is done, the selected file will appear in the window. Then, click on the "Finish" button. If the project was created with a later version of drivers or CubeMX, you will be prompted to migrate to the latest version. Click "Migrate" to accept.
+Once this step is done, the avaiable projects will appear in the window. Then, click on the "Finish" button. If the projects was created with a later version of drivers or CubeMX, you will be prompted to migrate to the latest version. Click "Migrate" to accept.
 
 ![Step 3 View](./Images/Step3.jpg)       
 
-The project is now properly imported. You can generate the code (Alt + K) and compile the project (Ctrl + B).
+The projects are now properly imported. You can generate the code (Alt + K) and compile one of the projects (Ctrl + B).
 
 ![Step 4 View](./Images/Step4.jpg)   
 
