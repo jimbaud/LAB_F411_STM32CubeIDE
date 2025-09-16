@@ -64,6 +64,7 @@ void SystemClock_Config(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 	//	LIS3DSH_InitTypeDef myAccConfigDef;
   /* USER CODE END 1 */
