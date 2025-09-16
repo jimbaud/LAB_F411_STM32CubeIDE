@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -131,8 +131,8 @@ void Make_Connection(void)
     printf("Client Create Connection\n");
     tBDAddr bdaddr = {0xaa, 0x00, 0x00, 0xE1, 0x80, 0x02};
 
-   // BSP_LED_On(LED2); //To indicate the start of the connection and discovery phase
-	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,GPIO_PIN_SET);
+    BSP_LED_On(LED2); //To indicate the start of the connection and discovery phase
+
     /*
     Scan_Interval, Scan_Window, Peer_Address_Type, Peer_Address, Own_Address_Type, Conn_Interval_Min,
     Conn_Interval_Max, Conn_Latency, Supervision_Timeout, Conn_Len_Min, Conn_Len_Max
@@ -207,8 +207,7 @@ void startReadRXCharHandle(void)
  */
 void receiveData(uint8_t* data_buffer, uint8_t Nb_bytes)
 {
-	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-//	BSP_LED_Toggle(LED2);
+  BSP_LED_Toggle(LED2);
 
   for(int i = 0; i < Nb_bytes; i++) {
     printf("%c", data_buffer[i]);

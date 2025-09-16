@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -111,7 +111,7 @@ void MX_BlueNRG_MS_Init(void)
   User_Init();
 
   /* Get the User Button initial state */
- // user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
+  user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
 
   hci_init(user_notify, NULL);
 
@@ -231,8 +231,8 @@ void MX_BlueNRG_MS_Process(void)
  */
 static void User_Init(void)
 {
-  //BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
-  //BSP_LED_Init(LED2);
+  BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
+  BSP_LED_Init(LED2);
 
   BSP_COM_Init(COM1);
 }
@@ -251,7 +251,7 @@ static void User_Process(void)
     /* Establish connection with remote device */
     Make_Connection();
     set_connectable = FALSE;
-   // user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
+    user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
   }
 
   if (BLE_Role == CLIENT)
@@ -267,8 +267,7 @@ static void User_Process(void)
 
     if (connected && end_read_tx_char_handle && end_read_rx_char_handle && !notification_enabled)
     {
-    	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,GPIO_PIN_RESET);
-      //BSP_LED_Off(LED2); //end of the connection and chars discovery phase
+      BSP_LED_Off(LED2); //end of the connection and chars discovery phase
       enableNotification();
     }
   }
@@ -280,7 +279,7 @@ static void User_Process(void)
     HAL_Delay(50);
 
     /* Wait until the User Button is released */
-    //while (BSP_PB_GetState(BUTTON_KEY) == !user_button_init_state);
+    while (BSP_PB_GetState(BUTTON_KEY) == !user_button_init_state);
 
     /* Debouncing */
     HAL_Delay(50);
@@ -307,14 +306,8 @@ static void User_Process(void)
   * @param  Button Specifies the pin connected EXTI line
   * @retval None.
   */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+void BSP_PB_Callback(Button_TypeDef Button)
 {
-	if(GPIO_Pin == B1_Pin)
   /* Set the User Button flag */
-  {user_button_pressed = 1;}
+  user_button_pressed = 1;
 }
-//void BSP_PB_Callback(Button_TypeDef Button)
-//{
-//  /* Set the User Button flag */
-//  user_button_pressed = 1;
-//}
